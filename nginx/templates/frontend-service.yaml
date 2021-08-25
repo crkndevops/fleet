@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo
+  name: nginx-deploy
   labels:
-    app: demo
+    app: nginx-deploy
     tier: allcloud
 spec:
   type: "{{ .Values.serviceType }}"
   ports:
   - port: 20003
   selector:
-    app: demo
+    app: nginx-deploy
     tier: allcloud
