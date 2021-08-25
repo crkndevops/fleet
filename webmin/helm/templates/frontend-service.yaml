@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: webmin-cp
+  name: webmin
   labels:
     app: webmin
-    tier: webmin-cp
+    tier: allcloud
 spec:
   type: "{{ .Values.serviceType }}"
   ports:
   - port: 10000
   selector:
     app: webmin
-    tier: webmin-cp
+    tier: allcloud
