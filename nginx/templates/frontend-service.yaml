@@ -8,7 +8,7 @@ metadata:
 spec:
   type: "{{ .Values.serviceType }}"
   ports:
-  - port: 20003
+  - port: 80
   selector:
     app: nginx-deploy
     tier: nginx-deploy
