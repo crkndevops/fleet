@@ -5,17 +5,17 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: demo
+      app: nginx-deploy
       tier: allcloud
   replicas: {{ .Values.replicas }}
   template:
     metadata:
       labels:
-        app: demo
+        app: nginx-deploy
         tier: allcloud
     spec:
       containers:
-      - name: demo
+      - name: nginx-deploy
         image: nginx:latest
         resources:
           requests:
