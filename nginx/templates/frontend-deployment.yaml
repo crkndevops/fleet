@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: allcloud
+  name: nginx-deploy
 spec:
   selector:
     matchLabels:
       app: nginx-deploy
-      tier: allcloud
+      tier: nginx-deploy
   replicas: {{ .Values.replicas }}
   template:
     metadata:
       labels:
         app: nginx-deploy
-        tier: allcloud
+        tier: nginx-deploy
     spec:
       containers:
       - name: nginx-deploy
