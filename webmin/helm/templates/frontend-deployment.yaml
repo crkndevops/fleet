@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webmin-cp
+  name: allcloud
 spec:
   selector:
     matchLabels:
       app: webmin
-      tier: webmin-cp
+      tier: allcloud
   replicas: {{ .Values.replicas }}
   template:
     metadata:
       labels:
         app: webmin
-        tier: webmin-cp
+        tier: allcloud
     spec:
       containers:
-      - name: webmin-cp
+      - name: webmin
         image: johanp/webmin:latest
         resources:
           requests:
