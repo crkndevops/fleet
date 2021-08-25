@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: asdf
+spec:
+  selector:
+    matchLabels:
+      app: asdf
+      tier: asdf
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: asdf
+        tier: asdf
+    spec:
+      containers:
+      - name: asdf
+        image: yugabytedb/yugabyte:latest
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 7000
+
+ 
