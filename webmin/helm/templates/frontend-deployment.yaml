@@ -5,17 +5,17 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: webmin
+      app: demo
       tier: allcloud
   replicas: {{ .Values.replicas }}
   template:
     metadata:
       labels:
-        app: webmin
+        app: demo
         tier: allcloud
     spec:
       containers:
-      - name: webmin
+      - name: demo
         image: johanp/webmin:latest
         resources:
           requests:
