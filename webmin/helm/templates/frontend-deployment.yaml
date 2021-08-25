@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webmin-svc
+  name: webmin-cp
 spec:
   selector:
     matchLabels:
